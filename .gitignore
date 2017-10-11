@@ -1,0 +1,7 @@
+.idea
+/node_modules/
+/index.min.js
+/bower_components/
+.vagrant/
+*.log
+Vagrantfile
