@@ -1,0 +1,25 @@
+---
+resources:
+  - name: source
+    type: git
+    source: 
+      uri: https://github.com/antonu17/npm-example.git
+      branch: master
+
+jobs:
+  - name: test
+    plan:
+      - get: source
+        trigger: true
+      
+      - task: unit
+        file: source/ci/tasks/test-unit.yml
+
+  - name: build
+    plan:
+      - get: source
+        trigger: true
+        passed: ["test"]
+
+      - task: compile
+        file: source/ci/tasks/compile.yml
