@@ -13,6 +13,9 @@ inputs:
 caches:
 - path: source/node_modules
 
+outputs:
+- name: out
+
 run:
   path: ci/scripts/compile.sh
   dir: source
