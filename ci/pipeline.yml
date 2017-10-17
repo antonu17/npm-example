@@ -23,3 +23,5 @@ jobs:
 
       - task: compile
         file: source/ci/tasks/compile.yml
+      - task: check
+        file: source/ci/tasks/check.yml
