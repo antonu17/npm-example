@@ -11,9 +11,6 @@ inputs:
 - name: source
 - name: out
 
-caches:
-- path: source/node_modules
-
 run:
   path: ci/scripts/check.sh
   dir: source
